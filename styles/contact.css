@@ -1,0 +1,107 @@
+/* ============================================
+   Sección de Contacto
+   ============================================ */
+
+.contact {
+    padding: var(--spacing-2xl) 0;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(135deg, rgba(13, 40, 24, 0.15) 0%, rgba(10, 15, 11, 0.2) 50%, rgba(13, 40, 24, 0.15) 100%),
+        radial-gradient(ellipse at 30% 30%, rgba(82, 183, 136, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 70%, rgba(26, 77, 46, 0.1) 0%, transparent 60%);
+    opacity: 0.6;
+    z-index: 0;
+    animation: heroOverlayPulse 15s ease-in-out infinite;
+    will-change: opacity, transform;
+}
+
+.contact::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(82, 183, 136, 0.2) 0%, transparent 55%),
+        radial-gradient(circle at 80% 80%, rgba(82, 183, 136, 0.25) 0%, transparent 55%),
+        radial-gradient(circle at 50% 20%, rgba(82, 183, 136, 0.15) 0%, transparent 50%),
+        linear-gradient(45deg, transparent 0%, rgba(82, 183, 136, 0.05) 50%, transparent 100%),
+        url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(82,183,136,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+    pointer-events: none;
+    animation: heroGlow 12s ease-in-out infinite;
+    will-change: opacity, transform;
+    z-index: 1;
+    mix-blend-mode: overlay;
+    opacity: 0.3;
+}
+
+.contact__form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: rgba(13, 40, 24, 0.82);
+    backdrop-filter: blur(6px);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid rgba(82, 183, 136, 0.35);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.contact__form {
+    display: grid;
+    gap: var(--spacing-lg);
+}
+
+.form__group {
+    position: relative;
+}
+
+.form__input {
+    width: 100%;
+    padding: var(--spacing-md);
+    background: rgba(10, 15, 11, 0.5);
+    border: 1px solid rgba(82, 183, 136, 0.3);
+    border-radius: var(--border-radius-md);
+    color: var(--color-white);
+    font-size: var(--font-size-base);
+    transition: all var(--transition-base);
+}
+
+.form__input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 15px rgba(82, 183, 136, 0.5);
+}
+
+.form__label {
+    position: absolute;
+    top: var(--spacing-md);
+    left: var(--spacing-md);
+    color: var(--color-gray);
+    pointer-events: none;
+    transition: all var(--transition-base);
+}
+
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label {
+    top: -0.75rem;
+    left: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+    color: var(--color-accent-light);
+    background: var(--color-primary-dark);
+    padding: 0 0.5rem;
+}
+

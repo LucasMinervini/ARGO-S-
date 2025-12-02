@@ -4,10 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ARGO'S PACK - Productos premium para el cuidado y bienestar de tu mascota. Descubre nuestra línea de productos diseñados con amor para tu compañero fiel.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.argospack.com/">
+    <meta property="og:title" content="ARGO'S PACK - Productos Premium para Mascotas">
+    <meta property="og:description" content="Productos premium para el cuidado y bienestar de tu mascota. Descubre nuestra línea de productos diseñados con amor para tu compañero fiel.">
+    <meta property="og:image" content="https://www.argospack.com/Utils/hero/hero-main.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.argospack.com/">
+    <meta property="twitter:title" content="ARGO'S PACK - Productos Premium para Mascotas">
+    <meta property="twitter:description" content="Productos premium para el cuidado y bienestar de tu mascota. Descubre nuestra línea de productos diseñados con amor para tu compañero fiel.">
+    <meta property="twitter:image" content="https://www.argospack.com/Utils/hero/hero-main.jpg">
+
     <title>ARGO'S PACK - Productos Premium para Mascotas</title>
-    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ARGO'S PACK",
+      "url": "https://www.argospack.com/",
+      "logo": "https://www.argospack.com/Utils/branding/logo-header.png"
+    }
+    </script>
     <!-- Animated Background -->
     <div class="animated-background">
         <div class="animated-background__image"></div>
@@ -49,22 +77,28 @@
             </div>
             <ul class="nav__menu" id="nav-menu">
                 <li class="nav__item">
-                    <a href="#inicio" class="nav__link">🏠 Inicio</a>
+                    <a href="#inicio" class="nav__link" data-i18n="nav.home">🏠 Inicio</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#productos" class="nav__link">🦴 Productos</a>
+                    <a href="#productos" class="nav__link" data-i18n="nav.products">🦴 Productos</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#beneficios" class="nav__link">✨ Beneficios</a>
+                    <a href="#beneficios" class="nav__link" data-i18n="nav.benefits">✨ Beneficios</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#testimonios" class="nav__link">💬 Testimonios</a>
+                    <a href="#testimonios" class="nav__link" data-i18n="nav.testimonials">💬 Testimonios</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#contacto" class="nav__link">📞 Contacto</a>
+                    <a href="#contact-us" class="nav__link" data-i18n="nav.contact">📞 Contacto</a>
                 </li>
             </ul>
-            <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+            <div class="nav__language">
+                <select id="language-selector" class="language-selector" data-i18n="language.selectLabel" data-i18n-type="aria-label" aria-label="Select language">
+                    <option value="ES" data-i18n-option="language.spanish">Español</option>
+                    <option value="EN" data-i18n-option="language.english">Inglés</option>
+                </select>
+            </div>
+            <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" data-i18n="aria.toggleMenu" data-i18n-type="aria-label">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -78,23 +112,23 @@
             <div class="hero__overlay"></div>
             <div class="hero__container container">
                 <div class="hero__content">
-                    <span class="hero__badge">Premium Pet Products</span>
+                    <span class="hero__badge" data-i18n="hero.badge">Premium Pet Products</span>
                     <h1 class="hero__title">
-                        <span class="hero__title--highlight">Cuidamos</span> a tu mejor amigo<br>
-                        con productos <span class="hero__title--accent">premium</span>
+                        <span class="hero__title--highlight" data-i18n="hero.titleHighlight">Cuidamos</span> <span data-i18n="hero.titleRest">a tu mejor amigo</span><br>
+                        <span data-i18n="hero.titleWith">con productos</span> <span class="hero__title--accent" data-i18n="hero.titleAccent">premium</span>
                     </h1>
-                    <p class="hero__description">
+                    <p class="hero__description" data-i18n="hero.description">
                         En ARGO'S PACK creemos que cada mascota merece lo mejor. Nuestros productos están diseñados 
                         con dedicación y calidad superior para garantizar el bienestar, comodidad y felicidad de tu compañero fiel.
                     </p>
                     <div class="hero__cta">
-                        <a href="#productos" class="btn btn--primary">Explorar Productos</a>
-                        <a href="#beneficios" class="btn btn--secondary">Conocer Más</a>
+                        <a href="#productos" class="btn btn--primary" data-i18n="hero.ctaPrimary">Explorar Productos</a>
+                        <a href="#beneficios" class="btn btn--secondary" data-i18n="hero.ctaSecondary">Conocer Más</a>
                     </div>
                 </div>
                 <div class="hero__image">
                     <div class="hero__image-wrapper">
-                        <img src="Utils/hero/hero-main.jpg" alt="Mascota feliz con productos ARGO'S PACK" class="hero__img" loading="eager">
+                        <img src="Utils/hero/hero-main.jpg" alt="Mascota feliz con productos ARGO'S PACK" class="hero__img" loading="eager" data-i18n="hero.imageAlt" data-i18n-type="alt">
                     </div>
                 </div>
             </div>
@@ -104,35 +138,35 @@
         <section class="benefits" id="beneficios">
             <div class="container">
                 <div class="section__header">
-                    <span class="section__badge">Nuestros Valores</span>
-                    <h2 class="section__title">¿Por qué elegir ARGO'S PACK?</h2>
+                    <span class="section__badge" data-i18n="benefits.badge">🐶 Nuestros Valores</span>
+                    <h2 class="section__title" data-i18n="benefits.title">¿Por qué elegir ARGO'S PACK? 🐾</h2>
                 </div>
                 <div class="benefits__grid">
                     <article class="benefit__card">
                         <div class="benefit__icon">🐾</div>
-                        <h3 class="benefit__title">Calidad Premium</h3>
-                        <p class="benefit__description">
+                        <h3 class="benefit__title" data-i18n="benefits.quality.title">Calidad Premium</h3>
+                        <p class="benefit__description" data-i18n="benefits.quality.description">
                             Productos seleccionados y probados para garantizar la máxima calidad y durabilidad.
                         </p>
                     </article>
                     <article class="benefit__card">
                         <div class="benefit__icon">❤️</div>
-                        <h3 class="benefit__title">Hecho con Amor</h3>
-                        <p class="benefit__description">
+                        <h3 class="benefit__title" data-i18n="benefits.love.title">Hecho con Amor</h3>
+                        <p class="benefit__description" data-i18n="benefits.love.description">
                             Cada producto está diseñado pensando en el bienestar y la felicidad de tu mascota.
                         </p>
                     </article>
                     <article class="benefit__card">
                         <div class="benefit__icon">✨</div>
-                        <h3 class="benefit__title">Innovación</h3>
-                        <p class="benefit__description">
+                        <h3 class="benefit__title" data-i18n="benefits.innovation.title">Innovación</h3>
+                        <p class="benefit__description" data-i18n="benefits.innovation.description">
                             Incorporamos las últimas tendencias y tecnologías en productos para mascotas.
                         </p>
                     </article>
                     <article class="benefit__card">
                         <div class="benefit__icon">🛡️</div>
-                        <h3 class="benefit__title">Seguridad</h3>
-                        <p class="benefit__description">
+                        <h3 class="benefit__title" data-i18n="benefits.safety.title">Seguridad</h3>
+                        <p class="benefit__description" data-i18n="benefits.safety.description">
                             Todos nuestros productos cumplen con los más altos estándares de seguridad y calidad.
                         </p>
                     </article>
@@ -144,131 +178,141 @@
         <section class="products" id="productos">
             <div class="container">
                 <div class="section__header">
-                    <span class="section__badge">Catálogo Premium</span>
-                    <h2 class="section__title">Nuestros Productos</h2>
-                    <p class="section__subtitle">Descubre nuestra línea completa de productos diseñados para el cuidado de tu mascota</p>
+                    <span class="section__badge" data-i18n="products.badge">Catálogo Premium</span>
+                    <h2 class="section__title" data-i18n="products.title">Nuestros Productos</h2>
+                    <p class="section__subtitle" data-i18n="products.subtitle">Descubre nuestra línea completa de productos diseñados para el cuidado de tu mascota</p>
                 </div>
                 
                 <div class="products__grid">
                     <!-- Product 1: Retractable Leash Black & Lime Green -->
-                    <article class="product__card category-card">
+                    <article class="product__card category-card" itemscope itemtype="https://schema.org/Product">
+                        <meta itemprop="name" content="Correa Retráctil Premium - Negra">
+                        <meta itemprop="description" content="Diseño ergonómico con acentos verde lima vibrantes para paseos cómodos y seguros.">
                         <div class="category-card__media">
-                            <img src="Utils/products/leash-black.jpg" alt="Correa Retráctil ARGO'S PACK - Negra con Acentos Verde Lima" loading="lazy">
+                            <img itemprop="image" src="Utils/products/leash-black.jpg" alt="Correa Retráctil ARGO'S PACK - Negra con Acentos Verde Lima" loading="lazy">
                             <span class="category-card__chip">Premium</span>
                         </div>
                         <div class="category-card__body">
-                            <div class="category-card__badge">
+                            <div class="category-card__badge" itemprop="brand" itemtype="https://schema.org/Brand">
                                 <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
-                                <span>Walk Pro</span>
+                                <span itemprop="name">Walk Pro</span>
                             </div>
-                            <h3 class="category-card__title">Correa Retráctil Premium - Negra</h3>
-                            <p class="category-card__subtitle">Diseño ergonómico con acentos verde lima vibrantes para paseos cómodos y seguros.</p>
+                            <h3 class="category-card__title" data-i18n="products.items.leashBlack.name">Correa Retráctil Premium - Negra</h3>
+                            <p class="category-card__subtitle" data-i18n="products.items.leashBlack.subtitle">Diseño ergonómico con acentos verde lima vibrantes para paseos cómodos y seguros.</p>
                             <ul class="category-card__features">
-                                <li>Diseño ergonómico con mango cómodo</li>
-                                <li>Acentos verde lima vibrantes</li>
-                                <li>Mecanismo de bloqueo seguro</li>
-                                <li>Incluye accesorio circular con logo ARGO'S PACK</li>
-                                <li>Gancho metálico resistente</li>
+                                <li data-i18n="products.items.leashBlack.features.0">Diseño ergonómico con mango cómodo</li>
+                                <li data-i18n="products.items.leashBlack.features.1">Acentos verde lima vibrantes</li>
+                                <li data-i18n="products.items.leashBlack.features.2">Mecanismo de bloqueo seguro</li>
+                                <li data-i18n="products.items.leashBlack.features.3">Incluye accesorio circular con logo ARGO'S PACK</li>
+                                <li data-i18n="products.items.leashBlack.features.4">Gancho metálico resistente</li>
                             </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
+                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta" data-i18n="products.buyButton">
                                 ¡Comprar en Mercado Libre!
                             </a>
                         </div>
                     </article>
 
                     <!-- Product 2: Retractable Leash White & Lavender -->
-                    <article class="product__card category-card">
+                    <article class="product__card category-card" itemscope itemtype="https://schema.org/Product">
+                        <meta itemprop="name" content="Correa Retráctil Premium - Blanca">
+                        <meta itemprop="description" content="Diseño moderno en blanco y lavanda con estilo elegante y funcional.">
                         <div class="category-card__media">
-                            <img src="Utils/products/leash-white.jpg" alt="Correa Retráctil ARGO'S PACK - Blanca con Acentos Lavanda" loading="lazy">
+                            <img itemprop="image" src="Utils/products/leash-white.jpg" alt="Correa Retráctil ARGO'S PACK - Blanca con Acentos Lavanda" loading="lazy">
                             <span class="category-card__chip">Elegant</span>
                         </div>
                         <div class="category-card__body">
-                            <div class="category-card__badge">
+                            <div class="category-card__badge" itemprop="brand" itemtype="https://schema.org/Brand">
                                 <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
-                                <span>Walk Pro</span>
+                                <span itemprop="name">Walk Pro</span>
                             </div>
-                            <h3 class="category-card__title">Correa Retráctil Premium - Blanca</h3>
-                            <p class="category-card__subtitle">Diseño moderno en blanco y lavanda con estilo elegante y funcional.</p>
+                            <h3 class="category-card__title" data-i18n="products.items.leashWhite.name">Correa Retráctil Premium - Blanca</h3>
+                            <p class="category-card__subtitle" data-i18n="products.items.leashWhite.subtitle">Diseño moderno en blanco y lavanda con estilo elegante y funcional.</p>
                             <ul class="category-card__features">
-                                <li>Diseño moderno en blanco y lavanda</li>
-                                <li>Mango ergonómico con textura antideslizante</li>
-                                <li>Botón de bloqueo fácil de usar</li>
-                                <li>Gancho metálico plateado de alta calidad</li>
-                                <li>Estilo elegante y funcional</li>
+                                <li data-i18n="products.items.leashWhite.features.0">Diseño moderno en blanco y lavanda</li>
+                                <li data-i18n="products.items.leashWhite.features.1">Mango ergonómico con textura antideslizante</li>
+                                <li data-i18n="products.items.leashWhite.features.2">Botón de bloqueo fácil de usar</li>
+                                <li data-i18n="products.items.leashWhite.features.3">Gancho metálico plateado de alta calidad</li>
+                                <li data-i18n="products.items.leashWhite.features.4">Estilo elegante y funcional</li>
                             </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
+                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta" data-i18n="products.buyButton">
                                 ¡Comprar en Mercado Libre!
                             </a>
                         </div>
                     </article>
 
                     <!-- Category Cards: Juguetes Interactivos -->
-                    <article class="product__card category-card category-card--toys">
+                    <article class="product__card category-card category-card--toys" itemscope itemtype="https://schema.org/Product">
+                        <meta itemprop="name" content="Juguetes Interactivos">
+                        <meta itemprop="description" content="Colección multisensorial para retar su inteligencia y liberar energía.">
                         <div class="category-card__media">
-                            <img src="Utils/more-products/toys.jpg" alt="Producto ARGO'S PACK - Juguetes Interactivos" loading="lazy">
+                            <img itemprop="image" src="Utils/more-products/toys.jpg" alt="Producto ARGO'S PACK - Juguetes Interactivos" loading="lazy">
                             <span class="category-card__chip">Sensory Pack</span>
                         </div>
                         <div class="category-card__body">
-                            <div class="category-card__badge">
+                            <div class="category-card__badge" itemprop="brand" itemtype="https://schema.org/Brand">
                                 <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
-                                <span>Edición Premium</span>
+                                <span itemprop="name">Edición Premium</span>
                             </div>
-                            <h3 class="category-card__title">Juguetes Interactivos</h3>
-                            <p class="category-card__subtitle">Colección multisensorial para retar su inteligencia y liberar energía.</p>
+                            <h3 class="category-card__title" data-i18n="products.items.toys.name">Juguetes Interactivos</h3>
+                            <p class="category-card__subtitle" data-i18n="products.items.toys.subtitle">Colección multisensorial para retar su inteligencia y liberar energía.</p>
                             <ul class="category-card__features">
-                                <li>Texturas y sonidos enriquecidos</li>
-                                <li>Materiales seguros y lavables</li>
-                                <li>Pack con 3 niveles de dificultad</li>
+                                <li data-i18n="products.items.toys.features.0">Texturas y sonidos enriquecidos</li>
+                                <li data-i18n="products.items.toys.features.1">Materiales seguros y lavables</li>
+                                <li data-i18n="products.items.toys.features.2">Pack con 3 niveles de dificultad</li>
                             </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
+                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta" data-i18n="products.discoverButton">
                                 Descubrir línea
                             </a>
                         </div>
                     </article>
 
                     <!-- Category Cards: Camas Premium -->
-                    <article class="product__card category-card category-card--beds">
+                    <article class="product__card category-card category-card--beds" itemscope itemtype="https://schema.org/Product">
+                        <meta itemprop="name" content="Camas Premium">
+                        <meta itemprop="description" content="Descanso ortopédico con soporte envolvente y telas respirables.">
                         <div class="category-card__media">
-                            <img src="Utils/more-products/beds.jpg" alt="Producto ARGO'S PACK - Camas Premium" loading="lazy">
+                            <img itemprop="image" src="Utils/more-products/beds.jpg" alt="Producto ARGO'S PACK - Camas Premium" loading="lazy">
                             <span class="category-card__chip">Soft Touch</span>
                         </div>
                         <div class="category-card__body">
-                            <div class="category-card__badge">
+                            <div class="category-card__badge" itemprop="brand" itemtype="https://schema.org/Brand">
                                 <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
-                                <span>Comfort Lab</span>
+                                <span itemprop="name">Comfort Lab</span>
                             </div>
-                            <h3 class="category-card__title">Camas Premium</h3>
-                            <p class="category-card__subtitle">Descanso ortopédico con soporte envolvente y telas respirables.</p>
+                            <h3 class="category-card__title" data-i18n="products.items.beds.name">Camas Premium</h3>
+                            <p class="category-card__subtitle" data-i18n="products.items.beds.subtitle">Descanso ortopédico con soporte envolvente y telas respirables.</p>
                             <ul class="category-card__features">
-                                <li>Espuma memory viscoelástica</li>
-                                <li>Fundas removibles anti manchas</li>
-                                <li>Bordes reforzados y antidesgarro</li>
+                                <li data-i18n="products.items.beds.features.0">Espuma memory viscoelástica</li>
+                                <li data-i18n="products.items.beds.features.1">Fundas removibles anti manchas</li>
+                                <li data-i18n="products.items.beds.features.2">Bordes reforzados y antidesgarro</li>
                             </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
+                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta" data-i18n="products.viewMeasures">
                                 Ver medidas
                             </a>
                         </div>
                     </article>
 
                     <!-- Category Cards: Accesorios de Entrenamiento -->
-                    <article class="product__card category-card category-card--training">
+                    <article class="product__card category-card category-card--training" itemscope itemtype="https://schema.org/Product">
+                        <meta itemprop="name" content="Accesorios de Entrenamiento">
+                        <meta itemprop="description" content="Herramientas positivas para rutinas urbanas y sesiones guiadas.">
                         <div class="category-card__media">
-                            <img src="Utils/more-products/training.jpg" alt="Producto ARGO'S PACK - Accesorios de Entrenamiento" loading="lazy">
+                            <img itemprop="image" src="Utils/more-products/training.jpg" alt="Producto ARGO'S PACK - Accesorios de Entrenamiento" loading="lazy">
                             <span class="category-card__chip">Pro Kits</span>
                         </div>
                         <div class="category-card__body">
-                            <div class="category-card__badge">
+                            <div class="category-card__badge" itemprop="brand" itemtype="https://schema.org/Brand">
                                 <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
-                                <span>Behavior Lab</span>
+                                <span itemprop="name">Behavior Lab</span>
                             </div>
-                            <h3 class="category-card__title">Accesorios de Entrenamiento</h3>
-                            <p class="category-card__subtitle">Herramientas positivas para rutinas urbanas y sesiones guiadas.</p>
+                            <h3 class="category-card__title" data-i18n="products.items.training.name">Accesorios de Entrenamiento</h3>
+                            <p class="category-card__subtitle" data-i18n="products.items.training.subtitle">Herramientas positivas para rutinas urbanas y sesiones guiadas.</p>
                             <ul class="category-card__features">
-                                <li>Clickers y arneses regulables</li>
-                                <li>Materiales pro antideslizantes</li>
-                                <li>Guía digital con rutinas</li>
+                                <li data-i18n="products.items.training.features.0">Clickers y arneses regulables</li>
+                                <li data-i18n="products.items.training.features.1">Materiales pro antideslizantes</li>
+                                <li data-i18n="products.items.training.features.2">Guía digital con rutinas</li>
                             </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
+                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta" data-i18n="products.customizeKit">
                                 Personalizar kit
                             </a>
                         </div>
@@ -285,14 +329,14 @@
                                 <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
                                 <span>Nutrition Care</span>
                             </div>
-                            <h3 class="category-card__title">Comedores Premium</h3>
-                            <p class="category-card__subtitle">Set ergonómico con bowls elevados y acabados fáciles de limpiar.</p>
+                            <h3 class="category-card__title" data-i18n="products.items.feeders.name">Comedores Premium</h3>
+                            <p class="category-card__subtitle" data-i18n="products.items.feeders.subtitle">Set ergonómico con bowls elevados y acabados fáciles de limpiar.</p>
                             <ul class="category-card__features">
-                                <li>Alturas ajustadas por talla</li>
-                                <li>Bases antideslizantes 360°</li>
-                                <li>Doble bowl en acero quirúrgico</li>
+                                <li data-i18n="products.items.feeders.features.0">Alturas ajustadas por talla</li>
+                                <li data-i18n="products.items.feeders.features.1">Bases antideslizantes 360°</li>
+                                <li data-i18n="products.items.feeders.features.2">Doble bowl en acero quirúrgico</li>
                             </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
+                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta" data-i18n="products.chooseModel">
                                 Elegir modelo
                             </a>
                         </div>
@@ -309,14 +353,14 @@
                                 <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
                                 <span>Fashion Lab</span>
                             </div>
-                            <h3 class="category-card__title">Ropa y Accesorios</h3>
-                            <p class="category-card__subtitle">Diseños modernos y cómodos para todas las ocasiones.</p>
+                            <h3 class="category-card__title" data-i18n="products.items.clothing.name">Ropa y Accesorios</h3>
+                            <p class="category-card__subtitle" data-i18n="products.items.clothing.subtitle">Diseños modernos y cómodos para todas las ocasiones.</p>
                             <ul class="category-card__features">
-                                <li>Telas de calidad premium</li>
-                                <li>Diseños modernos y funcionales</li>
-                                <li>Variedad de tallas disponibles</li>
+                                <li data-i18n="products.items.clothing.features.0">Telas de calidad premium</li>
+                                <li data-i18n="products.items.clothing.features.1">Diseños modernos y funcionales</li>
+                                <li data-i18n="products.items.clothing.features.2">Variedad de tallas disponibles</li>
                             </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
+                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta" data-i18n="products.viewCollection">
                                 Ver colección
                             </a>
                         </div>
@@ -333,14 +377,14 @@
                                 <img src="Utils/branding/logo-header.png" alt="ARGO'S PACK" loading="lazy">
                                 <span>Wellness Lab</span>
                             </div>
-                            <h3 class="category-card__title">Higiene y Cuidado</h3>
-                            <p class="category-card__subtitle">Productos naturales para el cuidado y bienestar de tu mascota.</p>
+                            <h3 class="category-card__title" data-i18n="products.items.hygiene.name">Higiene y Cuidado</h3>
+                            <p class="category-card__subtitle" data-i18n="products.items.hygiene.subtitle">Productos naturales para el cuidado y bienestar de tu mascota.</p>
                             <ul class="category-card__features">
-                                <li>Productos naturales y seguros</li>
-                                <li>Suaves con la piel sensible</li>
-                                <li>Fórmulas especializadas</li>
+                                <li data-i18n="products.items.hygiene.features.0">Productos naturales y seguros</li>
+                                <li data-i18n="products.items.hygiene.features.1">Suaves con la piel sensible</li>
+                                <li data-i18n="products.items.hygiene.features.2">Fórmulas especializadas</li>
                             </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta">
+                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta category-card__cta" data-i18n="products.exploreLine">
                                 Explorar línea
                             </a>
                         </div>
@@ -350,22 +394,22 @@
                     <article class="product__card product__card--gallery">
                         <div class="product__gallery">
                             <div class="product__thumbnails">
-                                <button class="product__thumbnail active" data-image="Utils/products/carrier-gallery/carrier-view-1.jpg" aria-label="Vista principal del producto">
+                                <button class="product__thumbnail active" data-image="Utils/products/carrier-gallery/carrier-view-1.jpg" data-i18n="aria.carrierView1" data-i18n-type="aria-label" aria-label="Vista principal del producto">
                                     <img src="Utils/products/carrier-gallery/carrier-view-1.jpg" alt="Vista 1" loading="lazy">
                                 </button>
-                                <button class="product__thumbnail" data-image="Utils/products/carrier-gallery/carrier-view-2.jpg" aria-label="Vista lateral del producto">
+                                <button class="product__thumbnail" data-image="Utils/products/carrier-gallery/carrier-view-2.jpg" data-i18n="aria.carrierView2" data-i18n-type="aria-label" aria-label="Vista lateral del producto">
                                     <img src="Utils/products/carrier-gallery/carrier-view-2.jpg" alt="Vista 2" loading="lazy">
                                 </button>
-                                <button class="product__thumbnail" data-image="Utils/products/carrier-gallery/carrier-view-3.jpg" aria-label="Vista expandida del producto">
+                                <button class="product__thumbnail" data-image="Utils/products/carrier-gallery/carrier-view-3.jpg" data-i18n="aria.carrierView3" data-i18n-type="aria-label" aria-label="Vista expandida del producto">
                                     <img src="Utils/products/carrier-gallery/carrier-view-3.jpg" alt="Vista 3" loading="lazy">
                                 </button>
-                                <button class="product__thumbnail" data-image="Utils/products/carrier-gallery/carrier-view-4.jpg" aria-label="Vista de dimensiones">
+                                <button class="product__thumbnail" data-image="Utils/products/carrier-gallery/carrier-view-4.jpg" data-i18n="aria.carrierView4" data-i18n-type="aria-label" aria-label="Vista de dimensiones">
                                     <img src="Utils/products/carrier-gallery/carrier-view-4.jpg" alt="Vista 4" loading="lazy">
                                 </button>
-                                <button class="product__thumbnail" data-image="Utils/products/carrier-gallery/carrier-view-5.jpg" aria-label="Vista superior">
+                                <button class="product__thumbnail" data-image="Utils/products/carrier-gallery/carrier-view-5.jpg" data-i18n="aria.carrierView5" data-i18n-type="aria-label" aria-label="Vista superior">
                                     <img src="Utils/products/carrier-gallery/carrier-view-5.jpg" alt="Vista 5" loading="lazy">
                                 </button>
-                                <button class="product__thumbnail" data-image="Utils/products/carrier-gallery/carrier-view-6.jpg" aria-label="Vista de detalles">
+                                <button class="product__thumbnail" data-image="Utils/products/carrier-gallery/carrier-view-6.jpg" data-i18n="aria.carrierView6" data-i18n-type="aria-label" aria-label="Vista de detalles">
                                     <img src="Utils/products/carrier-gallery/carrier-view-6.jpg" alt="Vista 6" loading="lazy">
                                 </button>
                             </div>
@@ -374,20 +418,20 @@
                             </div>
                         </div>
                         <div class="product__content">
-                            <h3 class="product__name">Transportador Expandible Premium</h3>
-                            <p class="product__description">
+                            <h3 class="product__name" data-i18n="products.items.carrier.name">Transportador Expandible Premium</h3>
+                            <p class="product__description" data-i18n="products.items.carrier.description">
                                 Transportador para gatos, perros pequeños y mascotas hasta 20lbs con luz LED interior recargable. 
                                 Aprobado para aerolíneas TSA. Paredes laterales expandibles, 4 puertas y almohadilla removible.
                             </p>
                             <ul class="product__benefits">
-                                <li>Paredes laterales expandibles</li>
-                                <li>Luz LED interior recargable</li>
-                                <li>Aprobado para aerolíneas TSA</li>
-                                <li>4 puertas de acceso</li>
-                                <li>Almohadilla removible y lavable</li>
-                                <li>Ideal para mascotas hasta 20lbs</li>
+                                <li data-i18n="products.items.carrier.benefits.0">Paredes laterales expandibles</li>
+                                <li data-i18n="products.items.carrier.benefits.1">Luz LED interior recargable</li>
+                                <li data-i18n="products.items.carrier.benefits.2">Aprobado para aerolíneas TSA</li>
+                                <li data-i18n="products.items.carrier.benefits.3">4 puertas de acceso</li>
+                                <li data-i18n="products.items.carrier.benefits.4">Almohadilla removible y lavable</li>
+                                <li data-i18n="products.items.carrier.benefits.5">Ideal para mascotas hasta 20lbs</li>
                             </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta">
+                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta" data-i18n="products.buyButton">
                                 ¡Comprar en Mercado Libre!
                             </a>
                         </div>
@@ -605,8 +649,8 @@
             <div class="bouncing-ball bouncing-ball--4"></div>
             <div class="container">
                 <div class="section__header">
-                    <span class="section__badge">Más Productos</span>
-                    <h2 class="section__title">Descubre nuestra línea completa</h2>
+                    <span class="section__badge" data-i18n="moreProducts.badge">Más Productos</span>
+                    <h2 class="section__title" data-i18n="moreProducts.title">Descubre nuestra línea completa</h2>
                 </div>
                 <div class="more-products__grid">
                     <article class="more-product__card">
@@ -614,14 +658,14 @@
                             <img src="Utils/more-products/toys.jpg" alt="Producto ARGO'S PACK - Juguetes Interactivos" class="more-product__img" loading="lazy">
                         </div>
                         <div class="more-product__content">
-                            <h3 class="more-product__name">Juguetes Interactivos</h3>
+                            <h3 class="more-product__name" data-i18n="moreProducts.toys.name">Juguetes Interactivos</h3>
                             <ul class="more-product__benefits">
-                                <li>Estimulación mental y física</li>
-                                <li>Materiales seguros y duraderos</li>
-                                <li>Diseños innovadores</li>
-                                <li>Para todas las edades</li>
+                                <li data-i18n="moreProducts.toys.benefits.0">Estimulación mental y física</li>
+                                <li data-i18n="moreProducts.toys.benefits.1">Materiales seguros y duraderos</li>
+                                <li data-i18n="moreProducts.toys.benefits.2">Diseños innovadores</li>
+                                <li data-i18n="moreProducts.toys.benefits.3">Para todas las edades</li>
                             </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta">
+                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta" data-i18n="products.buyButton">
                                 ¡Comprar en Mercado Libre!
                             </a>
                         </div>
@@ -631,18 +675,46 @@
                             <img src="Utils/more-products/beds.jpg" alt="Producto ARGO'S PACK - Camas Premium" class="more-product__img" loading="lazy">
                         </div>
                         <div class="more-product__content">
-                            <h3 class="more-product__name">Camas Premium</h3>
+                            <h3 class="more-product__name" data-i18n="moreProducts.beds.name">Camas Premium</h3>
                             <ul class="more-product__benefits">
-                                <li>Materiales hipoalergénicos</li>
-                                <li>Diseño ortopédico</li>
-                                <li>Fácil mantenimiento</li>
-                                <li>Múltiples tamaños disponibles</li>
+                                <li data-i18n="moreProducts.beds.benefits.0">Materiales hipoalergénicos</li>
+                                <li data-i18n="moreProducts.beds.benefits.1">Diseño ortopédico</li>
+                                <li data-i18n="moreProducts.beds.benefits.2">Fácil mantenimiento</li>
+                                <li data-i18n="moreProducts.beds.benefits.3">Múltiples tamaños disponibles</li>
                             </ul>
-                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta">
+                            <a href="https://www.mercadolibre.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn--cta" data-i18n="products.buyButton">
                                 ¡Comprar en Mercado Libre!
                             </a>
                         </div>
                     </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section class="contact" id="contact-us">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__badge" data-i18n="contact.badge">🐾 Contáctanos</span>
+                    <h2 class="section__title" data-i18n="contact.title">¿Tienes alguna consulta?</h2>
+                    <p class="section__subtitle" data-i18n="contact.subtitle">Envíanos un mensaje y te responderemos a la brevedad.</p>
+                </div>
+                <div class="contact__form-container">
+                    <form action="#" class="contact__form" id="contact-form">
+                        <div class="form__group">
+                            <input type="text" id="name" name="name" class="form__input" data-i18n="contact.form.name" data-i18n-type="placeholder" placeholder="Nombre" required>
+                            <label for="name" class="form__label"></label>
+                        </div>
+                        <div class="form__group">
+                            <input type="email" id="email" name="email" class="form__input" data-i18n="contact.form.email" data-i18n-type="placeholder" placeholder="Correo Electrónico" required>
+                            <label for="email" class="form__label"></label>
+                        </div>
+                        <div class="form__group">
+                            <textarea id="message" name="message" class="form__input" data-i18n="contact.form.message" data-i18n-type="placeholder" placeholder="Mensaje" rows="5" required></textarea>
+                            <label for="message" class="form__label"></label>
+                        </div>
+                        <button type="submit" class="btn btn--primary" data-i18n="contact.form.submit">Enviar Mensaje</button>
+                    </form>
                 </div>
             </div>
         </section>
@@ -658,47 +730,64 @@
                     <div class="footer__logo-wrapper">
                         <img src="Utils/branding/logo-footer.png" alt="ARGO'S PACK Logo" class="footer__logo">
                     </div>
-                    <p class="footer__tagline">Productos que hacen la vida de tu mascota más cómoda y feliz.</p>
+                    <p class="footer__tagline" data-i18n="footer.tagline">Productos que hacen la vida de tu mascota más cómoda y feliz.</p>
                 </div>
                 <div class="footer__links">
                     <div class="footer__section">
-                        <h4 class="footer__title">Enlaces</h4>
+                        <h4 class="footer__title" data-i18n="footer.links.title">🔗 Enlaces</h4>
                         <ul class="footer__list">
-                            <li><a href="#inicio" class="footer__link">Inicio</a></li>
-                            <li><a href="#productos" class="footer__link">Productos</a></li>
-                            <li><a href="#beneficios" class="footer__link">Beneficios</a></li>
-                            <li><a href="#testimonios" class="footer__link">Testimonios</a></li>
+                            <li><a href="#inicio" class="footer__link" data-i18n="footer.links.home">🏠 Inicio</a></li>
+                            <li><a href="#productos" class="footer__link" data-i18n="footer.links.products">🦴 Productos</a></li>
+                            <li><a href="#beneficios" class="footer__link" data-i18n="footer.links.benefits">✨ Beneficios</a></li>
+                            <li><a href="#testimonios" class="footer__link" data-i18n="footer.links.testimonials">💬 Testimonios</a></li>
                         </ul>
                     </div>
                     <div class="footer__section">
-                        <h4 class="footer__title">Contacto</h4>
+                        <h4 class="footer__title footer__title--contact" data-i18n="footer.contact.title">Contacto</h4>
                         <ul class="footer__list">
                             <li>
-                                <a href="mailto:contacto@argospack.com" class="footer__link">contacto@argospack.com</a>
+                                <a href="mailto:contacto@argospack.com" class="footer__link footer__link--email">contacto@argospack.com</a>
                             </li>
                         </ul>
                     </div>
                     <div class="footer__section">
-                        <h4 class="footer__title">Legal</h4>
+                        <h4 class="footer__title" data-i18n="footer.legal.title">⚖️ Legal</h4>
                         <ul class="footer__list">
-                            <li><a href="#" class="footer__link">Política de Privacidad</a></li>
-                            <li><a href="#" class="footer__link">Términos y Condiciones</a></li>
+                            <li><a href="#" class="footer__link" data-i18n="footer.legal.privacy">🛡️ Política de Privacidad</a></li>
+                            <li><a href="#" class="footer__link" data-i18n="footer.legal.terms">📜 Términos y Condiciones</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="footer__bottom">
-                <p class="footer__copyright">&copy; 2024 ARGO'S PACK. Todos los derechos reservados.</p>
+                <p class="footer__copyright" data-i18n="footer.copyright">&copy; 2024 ARGO'S PACK. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <!-- Botón flotante de WhatsApp -->
-    <a href="https://wa.me/541112345678" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chatear por WhatsApp">
+    <a href="https://wa.me/541112345678" class="whatsapp-float" target="_blank" rel="noopener noreferrer" data-i18n="aria.whatsapp" data-i18n-type="aria-label" aria-label="Chatear por WhatsApp">
         <img src="Utils/580b57fcd9996e24bc43c543.webp" alt="WhatsApp ARGO'S PACK" class="whatsapp-float__icon">
     </a>
 
-    <script src="script.js"></script>
+    <script src="i18n/i18n.js"></script>
+    <!-- JavaScript Modules -->
+    <script src="scripts/lazy-loading.js"></script>
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/smooth-scroll.js"></script>
+    <script src="scripts/header-scroll.js"></script>
+    <script src="scripts/scroll-animations.js"></script>
+    <script src="scripts/image-scroll-reveal.js"></script>
+    <script src="scripts/product-gallery.js"></script>
+    <script src="scripts/contact-form.js"></script>
+    <script src="scripts/lightbox.js"></script>
+    <script src="scripts/main.js"></script>
+
+    <!-- Lightbox Structure -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox__close" data-i18n="lightbox.close" data-i18n-type="aria-label" aria-label="Cerrar imagen">&times;</button>
+        <img src="" data-i18n="lightbox.imageAlt" data-i18n-type="alt" alt="Imagen ampliada" class="lightbox__img">
+    </div>
 </body>
 </html>
 

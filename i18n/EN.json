@@ -1,0 +1,302 @@
+{
+  "meta": {
+    "title": "ARGO'S PACK - Premium Pet Products",
+    "description": "ARGO'S PACK - Premium products for your pet's care and well-being. Discover our line of products designed with love for your faithful companion.",
+    "ogTitle": "ARGO'S PACK - Premium Pet Products",
+    "ogDescription": "Premium products for your pet's care and well-being. Discover our line of products designed with love for your faithful companion."
+  },
+  "nav": {
+    "home": "🏠 Home",
+    "products": "🦴 Products",
+    "benefits": "✨ Benefits",
+    "testimonials": "💬 Testimonials",
+    "contact": "📞 Contact"
+  },
+  "language": {
+    "spanish": "Spanish",
+    "english": "English",
+    "selectLabel": "Select language"
+  },
+  "hero": {
+    "badge": "Premium Pet Products",
+    "titleHighlight": "We care for",
+    "titleRest": "your best friend",
+    "titleWith": "with",
+    "titleAccent": "premium",
+    "description": "At ARGO'S PACK we believe that every pet deserves the best. Our products are designed with dedication and superior quality to ensure the well-being, comfort and happiness of your faithful companion.",
+    "ctaPrimary": "Explore Products",
+    "ctaSecondary": "Learn More",
+    "imageAlt": "Happy pet with ARGO'S PACK products"
+  },
+  "benefits": {
+    "badge": "🐶 Our Values",
+    "title": "Why choose ARGO'S PACK? 🐾",
+    "quality": {
+      "title": "Premium Quality",
+      "description": "Selected and tested products to guarantee maximum quality and durability."
+    },
+    "love": {
+      "title": "Made with Love",
+      "description": "Every product is designed with your pet's well-being and happiness in mind."
+    },
+    "innovation": {
+      "title": "Innovation",
+      "description": "We incorporate the latest trends and technologies in pet products."
+    },
+    "safety": {
+      "title": "Safety",
+      "description": "All our products meet the highest safety and quality standards."
+    }
+  },
+  "products": {
+    "badge": "Premium Catalog",
+    "title": "Our Products",
+    "subtitle": "Discover our complete line of products designed for your pet's care",
+    "buyButton": "Buy on Mercado Libre!",
+    "discoverButton": "Discover line",
+    "viewMeasures": "View measures",
+    "customizeKit": "Customize kit",
+    "chooseModel": "Choose model",
+    "viewCollection": "View collection",
+    "exploreLine": "Explore line",
+    "items": {
+      "leashBlack": {
+        "name": "Premium Retractable Leash - Black",
+        "subtitle": "Ergonomic design with vibrant lime green accents for comfortable and safe walks.",
+        "features": [
+          "Ergonomic design with comfortable handle",
+          "Vibrant lime green accents",
+          "Secure locking mechanism",
+          "Includes circular accessory with ARGO'S PACK logo",
+          "Resistant metal hook"
+        ]
+      },
+      "leashWhite": {
+        "name": "Premium Retractable Leash - White",
+        "subtitle": "Modern design in white and lavender with elegant and functional style.",
+        "features": [
+          "Modern design in white and lavender",
+          "Ergonomic handle with non-slip texture",
+          "Easy-to-use lock button",
+          "High-quality silver metal hook",
+          "Elegant and functional style"
+        ]
+      },
+      "toys": {
+        "name": "Interactive Toys",
+        "subtitle": "Multisensory collection to challenge their intelligence and release energy.",
+        "features": [
+          "Enriched textures and sounds",
+          "Safe and washable materials",
+          "Pack with 3 difficulty levels"
+        ]
+      },
+      "beds": {
+        "name": "Premium Beds",
+        "subtitle": "Orthopedic rest with enveloping support and breathable fabrics.",
+        "features": [
+          "Memory viscoelastic foam",
+          "Removable stain-resistant covers",
+          "Reinforced and tear-resistant edges"
+        ]
+      },
+      "training": {
+        "name": "Training Accessories",
+        "subtitle": "Positive tools for urban routines and guided sessions.",
+        "features": [
+          "Clickers and adjustable harnesses",
+          "Professional non-slip materials",
+          "Digital guide with routines"
+        ]
+      },
+      "feeders": {
+        "name": "Premium Feeders",
+        "subtitle": "Ergonomic set with elevated bowls and easy-to-clean finishes.",
+        "features": [
+          "Heights adjusted by size",
+          "360° non-slip bases",
+          "Double bowl in surgical steel"
+        ]
+      },
+      "clothing": {
+        "name": "Clothing and Accessories",
+        "subtitle": "Modern and comfortable designs for all occasions.",
+        "features": [
+          "Premium quality fabrics",
+          "Modern and functional designs",
+          "Variety of sizes available"
+        ]
+      },
+      "hygiene": {
+        "name": "Hygiene and Care",
+        "subtitle": "Natural products for your pet's care and well-being.",
+        "features": [
+          "Natural and safe products",
+          "Gentle on sensitive skin",
+          "Specialized formulas"
+        ]
+      },
+      "carrier": {
+        "name": "Premium Expandable Carrier",
+        "description": "Carrier for cats, small dogs and pets up to 20lbs with rechargeable interior LED light. TSA approved for airlines. Expandable side walls, 4 doors and removable pad.",
+        "benefits": [
+          "Expandable side walls",
+          "Rechargeable interior LED light",
+          "TSA approved for airlines",
+          "4 access doors",
+          "Removable and washable pad",
+          "Ideal for pets up to 20lbs"
+        ]
+      },
+      "feeders2": {
+        "name": "Feeders and Waterers",
+        "subtitle": "Ergonomic set with elevated bowls and easy-to-clean finishes.",
+        "features": [
+          "Non-toxic materials",
+          "Non-slip design",
+          "Easy maintenance",
+          "Different capacities"
+        ]
+      },
+      "hygiene2": {
+        "name": "Hygiene and Care",
+        "subtitle": "Natural products for your pet's care and well-being.",
+        "features": [
+          "Natural products",
+          "Gentle on skin",
+          "Effective and safe",
+          "Specialized formulas"
+        ]
+      },
+      "clothing2": {
+        "name": "Clothing and Accessories",
+        "subtitle": "Modern and comfortable designs for all occasions.",
+        "features": [
+          "Quality fabrics",
+          "Modern designs",
+          "Variety of sizes",
+          "Guaranteed comfort"
+        ]
+      },
+      "travel": {
+        "name": "Travel and Transport",
+        "subtitle": "Safe and comfortable solutions for traveling with your pet.",
+        "features": [
+          "TSA approved carriers",
+          "Ergonomic and safe design",
+          "Easy to clean and maintain",
+          "Multiple sizes available"
+        ]
+      },
+      "health": {
+        "name": "Health and Wellness",
+        "subtitle": "Specialized products to keep your pet healthy and happy.",
+        "features": [
+          "Veterinary approved products",
+          "Natural and safe formulas",
+          "Promote overall well-being",
+          "Proven results"
+        ]
+      },
+      "safety": {
+        "name": "Safety and Protection",
+        "subtitle": "Safety equipment to protect your pet at all times.",
+        "features": [
+          "Certified safety harnesses",
+          "Customized identification plates",
+          "Reflectors for night visibility",
+          "Resistant and durable materials"
+        ]
+      },
+      "entertainment": {
+        "name": "Entertainment",
+        "subtitle": "Toys and activities to keep your pet active and entertained.",
+        "features": [
+          "Smart interactive toys",
+          "Activities for mental stimulation",
+          "Safe and durable designs",
+          "For all ages and sizes"
+        ]
+      },
+      "grooming": {
+        "name": "Grooming and Care",
+        "subtitle": "Professional tools to keep your pet clean and healthy.",
+        "features": [
+          "Complete grooming kits",
+          "Premium hygiene products",
+          "Professional tools",
+          "Comprehensive and safe care"
+        ]
+      }
+    }
+  },
+  "moreProducts": {
+    "badge": "More Products",
+    "title": "Discover our complete line",
+    "toys": {
+      "name": "Interactive Toys",
+      "benefits": [
+        "Mental and physical stimulation",
+        "Safe and durable materials",
+        "Innovative designs",
+        "For all ages"
+      ]
+    },
+    "beds": {
+      "name": "Premium Beds",
+      "benefits": [
+        "Hypoallergenic materials",
+        "Orthopedic design",
+        "Easy maintenance",
+        "Multiple sizes available"
+      ]
+    }
+  },
+  "contact": {
+    "badge": "🐾 Contact Us",
+    "title": "Do you have any questions?",
+    "subtitle": "Send us a message and we will respond as soon as possible.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send Message",
+      "success": "Your email client will open to send the message. Thank you for contacting us!",
+      "subject": "Contact Message from ARGO'S PACK"
+    }
+  },
+  "footer": {
+    "tagline": "Products that make your pet's life more comfortable and happy.",
+    "links": {
+      "title": "🔗 Links",
+      "home": "🏠 Home",
+      "products": "🦴 Products",
+      "benefits": "✨ Benefits",
+      "testimonials": "💬 Testimonials"
+    },
+    "contact": {
+      "title": "Contact"
+    },
+    "legal": {
+      "title": "⚖️ Legal",
+      "privacy": "🛡️ Privacy Policy",
+      "terms": "📜 Terms and Conditions"
+    },
+    "copyright": "© 2024 ARGO'S PACK. All rights reserved."
+  },
+  "lightbox": {
+    "close": "Close image",
+    "imageAlt": "Enlarged image"
+  },
+  "aria": {
+    "toggleMenu": "Toggle navigation menu",
+    "whatsapp": "Chat via WhatsApp",
+    "carrierView1": "Main product view",
+    "carrierView2": "Side product view",
+    "carrierView3": "Expanded product view",
+    "carrierView4": "Dimensions view",
+    "carrierView5": "Top view",
+    "carrierView6": "Details view"
+  }
+}
+
