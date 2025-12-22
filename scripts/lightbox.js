@@ -22,20 +22,35 @@
             img.style.cursor = 'zoom-in'; // Add a visual cue
             img.addEventListener('click', () => {
                 lightbox.classList.add('active');
+                lightbox.setAttribute('aria-hidden', 'false');
                 lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt || 'Product image';
+                originalOverflow = document.body.style.overflow;
                 document.body.style.overflow = 'hidden'; // Prevent scrolling
+                // Focus the close button for keyboard users
+                lightboxClose.focus();
             });
         });
 
-        lightboxClose.addEventListener('click', () => {
+        // Close lightbox function
+        const closeLightbox = () => {
             lightbox.classList.remove('active');
-            document.body.style.overflow = ''; // Restore scrolling
-        });
+            lightbox.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = originalOverflow; // Restore original
+        };
+
+        lightboxClose.addEventListener('click', closeLightbox);
 
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) { // Close when clicking outside the image
-                lightbox.classList.remove('active');
-                document.body.style.overflow = '';
+                closeLightbox();
+            }
+        });
+        
+        // Keyboard support
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
             }
         });
     }
