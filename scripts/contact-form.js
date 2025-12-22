@@ -42,11 +42,8 @@
         });
     }
 
-    // Update Contact Form Subject (for i18n)
-    window.updateContactFormSubject = function(subject) {
-        // This function is called by i18n.js when language changes
-        // The subject is already updated in the form submission handler
-    };
+    // Exportar función para uso global
+    window.initContactForm = initContactForm;
 
     // Exportar función para uso global
     window.initContactForm = initContactForm;
