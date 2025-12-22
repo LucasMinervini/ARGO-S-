@@ -17,15 +17,27 @@
         }
 
         // Inicializar todas las funcionalidades
-        if (window.initLazyLoading) initLazyLoading();
-        if (window.initMobileMenu) initMobileMenu();
-        if (window.initSmoothScroll) initSmoothScroll();
-        if (window.initHeaderScroll) initHeaderScroll();
-        if (window.initScrollAnimations) initScrollAnimations();
-        if (window.initImageScrollReveal) initImageScrollReveal();
-        if (window.initProductGallery) initProductGallery();
-        if (window.initContactForm) initContactForm();
-        if (window.initLightbox) initLightbox();
+        const modules = [
+            { name: 'LazyLoading', fn: window.initLazyLoading },
+            { name: 'MobileMenu', fn: window.initMobileMenu },
+            { name: 'SmoothScroll', fn: window.initSmoothScroll },
+            { name: 'HeaderScroll', fn: window.initHeaderScroll },
+            { name: 'ScrollAnimations', fn: window.initScrollAnimations },
+            { name: 'ImageScrollReveal', fn: window.initImageScrollReveal },
+            { name: 'ProductGallery', fn: window.initProductGallery },
+            { name: 'ContactForm', fn: window.initContactForm },
+            { name: 'Lightbox', fn: window.initLightbox }
+        ];
+
+        modules.forEach(({ name, fn }) => {
+            if (fn) {
+                try {
+                    fn();
+                } catch (error) {
+                    console.error(`Failed to initialize ${name}:`, error);
+                }
+            }
+        });
     }
 
     // Iniciar la aplicación
