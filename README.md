@@ -37,9 +37,41 @@ Esta landing page actúa como un catálogo visual y persuasivo que redirige a lo
 ```
 ArgosWeb/
 ├── index.html              # Estructura HTML principal
-├── styles.css              # Estilos CSS con efectos visuales
-├── script.js               # JavaScript para interactividad
+├── script.js               # JavaScript deprecado (modularizado)
 ├── README.md               # Documentación del proyecto
+├── mejoras.md              # Plan de mejoras del proyecto
+│
+├── scripts/                # Módulos JavaScript organizados por funcionalidad
+│   ├── main.js             # Archivo principal que inicializa todos los módulos
+│   ├── lazy-loading.js     # Carga diferida de imágenes
+│   ├── navigation.js       # Menú móvil y navegación
+│   ├── smooth-scroll.js    # Scroll suave para enlaces de ancla
+│   ├── header-scroll.js    # Efecto de scroll en el header
+│   ├── scroll-animations.js # Animaciones al hacer scroll (Fade In)
+│   ├── image-scroll-reveal.js # Efecto de scroll reveal para imágenes
+│   ├── product-gallery.js  # Cambio de imágenes en la galería de productos
+│   ├── contact-form.js     # Manejo del formulario de contacto
+│   └── lightbox.js         # Funcionalidad del lightbox para imágenes
+│
+├── styles/                 # Módulos CSS organizados por componente
+│   ├── main.css            # Archivo principal que importa todos los módulos
+│   ├── variables.css       # Variables CSS (colores, tipografía, espaciado)
+│   ├── reset.css           # Reset y estilos base
+│   ├── utilities.css       # Clases utilitarias y helpers
+│   ├── background.css      # Fondo animado con efectos visuales
+│   ├── header.css          # Header y navegación
+│   ├── hero.css            # Sección Hero
+│   ├── buttons.css         # Estilos de botones
+│   ├── benefits.css        # Sección de beneficios
+│   ├── products.css        # Productos y category cards
+│   ├── gallery.css         # Layout de galería de productos
+│   ├── more-products.css   # Sección de más productos con animaciones
+│   ├── contact.css         # Formulario de contacto
+│   ├── lightbox.css        # Componente lightbox
+│   ├── footer.css          # Footer
+│   ├── whatsapp.css        # Botón flotante de WhatsApp
+│   ├── responsive.css      # Media queries responsive
+│   └── lazy-loading.css    # Estilos para lazy loading
 │
 └── Utils/                  # Assets organizados por funcionalidad
     ├── branding/           # Logos y elementos de marca
@@ -139,7 +171,7 @@ Edita los enlaces en `index.html` dentro de cada `.product__card`:
 
 ### Modificar Colores
 
-Los colores están definidos como variables CSS en `styles.css`:
+Los colores están definidos como variables CSS en `styles/variables.css`:
 
 ```css
 :root {
@@ -233,9 +265,29 @@ Todas las secciones comparten efectos visuales consistentes:
 ## 🔧 Tecnologías Utilizadas
 
 - **HTML5**: Estructura semántica
-- **CSS3**: Variables CSS, Flexbox, Grid, Animaciones
+- **CSS3**: Variables CSS, Flexbox, Grid, Animaciones, Arquitectura Modular
 - **JavaScript**: Vanilla JS, ES6+
 - **Sin Dependencias**: Código puro, sin librerías externas
+
+## 🏗️ Arquitectura Modular
+
+El proyecto utiliza una arquitectura modular tanto para CSS como para JavaScript para mejorar la mantenibilidad y organización del código:
+
+### Arquitectura CSS Modular
+
+- **Separación por Componentes**: Cada componente tiene su propio archivo CSS
+- **Variables Centralizadas**: Todas las variables CSS están en `styles/variables.css`
+- **Importación Unificada**: Todos los módulos se importan a través de `styles/main.css`
+- **Fácil Mantenimiento**: Cada módulo puede ser editado independientemente sin afectar otros componentes
+
+### Arquitectura JavaScript Modular
+
+- **Separación por Funcionalidad**: Cada funcionalidad tiene su propio archivo JavaScript
+- **Inicialización Centralizada**: Todos los módulos se inicializan desde `scripts/main.js`
+- **Carga Ordenada**: Los módulos se cargan en el orden correcto a través de `index.html`
+- **Fácil Mantenimiento**: Cada módulo puede ser editado independientemente sin afectar otros componentes
+
+Para más detalles sobre la modularización, consulta `mejoras.md`.
 
 ---
 
