@@ -22,16 +22,12 @@
     left: 0;
     right: 0;
     bottom: 0;
-    /* Overlay muy sutil para permitir que la imagen del fondo se vea */
-    background: 
-        linear-gradient(135deg, rgba(13, 40, 24, 0.15) 0%, rgba(10, 15, 11, 0.2) 50%, rgba(13, 40, 24, 0.15) 100%),
-        radial-gradient(ellipse at 30% 30%, rgba(82, 183, 136, 0.08) 0%, transparent 60%),
-        radial-gradient(ellipse at 70% 70%, rgba(26, 77, 46, 0.1) 0%, transparent 60%);
-    opacity: 0.6;
+    /* Hacemos el overlay totalmente transparente para que se vea al 100% el background animado */
+    background: transparent;
+    opacity: 0;
     z-index: 0;
-    animation: heroOverlayPulse 15s ease-in-out infinite;
-    will-change: opacity, transform;
-    /* Sin backdrop-filter para que la imagen se vea claramente */
+    animation: none;
+    will-change: auto;
 }
 
 .hero::after {
@@ -41,16 +37,13 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
-        radial-gradient(circle at 20% 50%, rgba(82, 183, 136, 0.2) 0%, transparent 55%),
-        radial-gradient(circle at 80% 80%, rgba(82, 183, 136, 0.25) 0%, transparent 55%),
-        radial-gradient(circle at 50% 20%, rgba(82, 183, 136, 0.15) 0%, transparent 50%),
-        linear-gradient(45deg, transparent 0%, rgba(82, 183, 136, 0.05) 50%, transparent 100%);
+    /* Completamente transparente para que se vea el fondo al 100% */
+    background: transparent;
+    opacity: 0;
     pointer-events: none;
-    animation: heroGlow 12s ease-in-out infinite;
-    will-change: opacity, transform;
     z-index: 1;
-    mix-blend-mode: overlay;
+    animation: none;
+    will-change: auto;
 }
 
 @keyframes heroOverlayPulse {
@@ -90,9 +83,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(82,183,136,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
-    opacity: 0.3;
+    /* Completamente transparente */
+    background: transparent;
+    opacity: 0;
     pointer-events: none;
+    display: none;
 }
 
 .hero__container {
@@ -108,13 +103,32 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-lg);
+    position: relative;
+}
+
+/* Overlay sutil con gradiente radial solo detrás del texto para mejorar legibilidad */
+.hero__content::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    right: -10%;
+    bottom: -20%;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(0, 0, 0, 0.25) 0%,
+        rgba(0, 0, 0, 0.15) 40%,
+        transparent 70%
+    );
+    z-index: -1;
+    pointer-events: none;
 }
 
 .hero__badge {
     display: inline-block;
     padding: var(--spacing-xs) var(--spacing-md);
     background: rgba(82, 183, 136, 0.2);
-    color: var(--color-accent-light);
+    color: var(--color-white);
     font-size: var(--font-size-sm);
     font-weight: 600;
     text-transform: uppercase;
@@ -123,6 +137,10 @@
     border: 1px solid rgba(82, 183, 136, 0.3);
     width: fit-content;
     margin-bottom: var(--spacing-sm);
+    /* Text-shadow mejorado para legibilidad */
+    text-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.9),
+        0 4px 8px rgba(0, 0, 0, 0.7);
 }
 
 .hero__title {
@@ -131,6 +149,17 @@
     line-height: 1.1;
     color: var(--color-white);
     margin-bottom: var(--spacing-md);
+    /* Sin text-shadow aquí para no interferir con el gradiente */
+}
+
+/* Text-shadow solo para las partes sin gradiente */
+.hero__title > span:not(.hero__title--highlight):not(.hero__title--accent) {
+    text-shadow: 
+        0 1px 2px rgba(0, 0, 0, 1),
+        0 2px 4px rgba(0, 0, 0, 0.95),
+        0 4px 8px rgba(0, 0, 0, 0.9),
+        0 8px 16px rgba(0, 0, 0, 0.8),
+        0 0 30px rgba(0, 0, 0, 0.6);
 }
 
 .hero__title--highlight {
@@ -138,17 +167,32 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    /* Text-shadow sutil solo para el contorno, sin interferir con el gradiente */
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8)) 
+            drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
 }
 
 .hero__title--accent {
-    color: var(--color-accent-light);
+    color: var(--color-primary-light);
+    /* Text-shadow para la palabra "premium" */
+    text-shadow: 
+        0 1px 2px rgba(0, 0, 0, 0.9),
+        0 2px 4px rgba(0, 0, 0, 0.8),
+        0 4px 8px rgba(0, 0, 0, 0.7),
+        0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .hero__description {
     font-size: var(--font-size-xl);
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 1);
     line-height: 1.8;
     max-width: 90%;
+    /* Text-shadow multicapa mejorado para legibilidad */
+    text-shadow: 
+        0 1px 2px rgba(0, 0, 0, 1),
+        0 2px 4px rgba(0, 0, 0, 0.95),
+        0 4px 8px rgba(0, 0, 0, 0.9),
+        0 0 20px rgba(0, 0, 0, 0.7);
 }
 
 .hero__cta {

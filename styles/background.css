@@ -19,7 +19,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('Utils/background/pngtree-abstract-dark-green-background-with-glowing-light-and-triangular-shapes-image_17322599.jpg');
+    background-image: url('../Utils/background/perro\ y\ gato.jpeg');
     background-size: 110%;
     background-position: center;
     background-repeat: no-repeat;
@@ -46,7 +46,7 @@
     }
 }
 
-/* Overlay oscuro para mejorar legibilidad */
+/* Overlay completamente transparente para que se vea la imagen al 100% */
 .animated-background__image::after {
     content: '';
     position: absolute;
@@ -54,11 +54,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: 
-        linear-gradient(180deg, rgba(10, 15, 11, 0.25) 0%, rgba(10, 15, 11, 0.15) 50%, rgba(10, 15, 11, 0.25) 100%),
-        radial-gradient(ellipse at center, transparent 0%, rgba(10, 15, 11, 0.2) 100%);
+    background: transparent;
+    opacity: 0;
     z-index: 1;
-    animation: overlayPulse 15s ease-in-out infinite;
+    animation: none;
 }
 
 @keyframes overlayPulse {
